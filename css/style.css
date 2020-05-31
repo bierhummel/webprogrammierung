@@ -26,10 +26,10 @@
     padding: 10px;
 }
 
-body {
+/*body {
     background-color: #ffffff;
     text-align: left;
-}
+}*/
 
 
 .img {
@@ -69,17 +69,22 @@ h3 {
     color: #1e1e52;
 }
 
-p {
+/*p {
     text-align: left;
     color: black;
     background-color: white;
 
-}
+}*/
 
 .footer {
     text-align: center;
 }
 
-.row > div {
-    margin-bottom: 1rem;
+.last_td {
+    margin-bottom: 3rem;
 }
+
+.end {
+    text-align: end;
+}
+
