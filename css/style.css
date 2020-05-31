@@ -63,6 +63,7 @@ h1 {
     color: white;
 }
 
+
 h3 {
 
     font-size: 200%;
@@ -82,4 +83,17 @@ p {
 
 .row > div {
     margin-bottom: 1rem;
+}
+
+
+#fields1 {
+    width: 78.5%
+}
+
+#fields2 {
+    width: 198%
+}
+
+#fields3 {
+    width: 165%
 }

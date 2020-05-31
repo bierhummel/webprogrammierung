@@ -35,18 +35,19 @@
     </div>
 
     <div class="container border">
-        <section>
+     
             <!--Annordung der Inputfelder in ein passendes responsives Grid-Layout fehlt noch-->
 
             <form action="jobangebot_anzeigen.html" method="post">
                 <section>
                     <h3 class="center">Allgemeine Informationen </h3>
                     <h4 class="center">Informationen zum Job</h4>
-
+                    </section>
+        <section>
                     <div class="row">
                         <div class="col-md-6">
-                            <select class="form-control" name="fachrichtung" size="1" required>
-                                <option value="">Beschäftigunsart</option>
+                            <select class= "form-control" name="fachrichtung" id="fields1" size="1" required>
+                                <option value="" disabled selected>Beschäftigungsart</option>
                                 <option value="fr1">Festanstellung</option>
                                 <option value="fr2">Praktikum</option>
                                 <option value="fr3">Aushilfe</option>
@@ -56,16 +57,16 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label> Jobbezeichnung:
-                                <input type="text" name="jbez" maxlength="50" value="" placeholder="Jobbezeichnung" required>
-                            </label>
+                            <label title="Fügen Sie eine Jobbbezeichnung hinzu.">
+                                <input id = "fields2" type="text" name="jbez" maxlength="50" value="" placeholder="Jobbezeichnung hinzufügen" required>
+                            </label>    
                         </div>
                     </div>
-
+                    
                     <div class="row">
                         <div class="col-lg-6">
-                            <select class="form-control" name="fachrichtung" size="1" required>
-                                <option value="">Fachrichtung auswählen</option>
+                            <select class="form-control" name="fachrichtung" size="1" id= "fields1" required>
+                                <option value="" disabled selected>Fachrichtung auswählen</option>
                                 <option value="fr1">Bildungs- und Sozialwissenschaften</option>
                                 <option value="fr2">Informatik, Wirtschafts- und Rechtswissenschaften</option>
                                 <option value="fr3">Sprach- und Kulturwissenschaften</option>
@@ -74,36 +75,32 @@
                                 <option value="fr6">Medizin und Gesundheitswissenschaften</option>
                             </select>
                         </div>
+                            <div class=" col-md-6">
+                                <label title="Geben Sie hier einen Link zu Ihrem firmeneigenen Bewerbungsportal ein">
+                                <select class="form-control" name="fachrichtung" id= "fields3" required>
+                                <option value="" disabled selected>Zeitintensität auswählen</option>
+                                <option value="fr1">Vollzeit</option>
+                                <option value="fr2">Teilzeit</option>
+                                <option value="fr3">max. 20h/Woche</option>
+                            </select>
+                         </label>
+                        </div>
+                   
+
                         <div class="col-lg-6">
                             <label>
                                 <!--später min=(heute)-->
-                                Frühster Beginn der Beschäftigung:
+                                Frühester Beginn der Beschäftigung:
                                 <input type="date" name="jdate" value="" required>
                             </label>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xl-1 col-md-2">
-                            Zeitintesität:
-                        </div>
-                        <div class="col-xl-5 col-md-4">
-                            <!--Später mindestens eine Angabe required festlegen.. js?-->
-                            <label>
-                                <input type="checkbox" name="teilzeit" value="Teilzeit"> Teilzeit
-                            </label>
-                            <label>
-                                <input type="checkbox" name="vollzeit" value="Vollzeit"> Vollzeit
-                            </label>
-                            <label>
-                                <input type="checkbox" name="20h" value="20h"> max. 20h/Woche
-                            </label>
-                        </div>
-                        <div class="col-md-6">
+                   
+                    <div class="col-md-6">
                             <label title="Geben Sie hier einen Link zu Ihrem firmeneigenen Bewerbungsportal ein">
-                                Link zur direkten Bewerbung (optional): <input type="text" name="blink" maxlength="50" value="">
+                               <input id= "fields2" type="text" placeholder= " Link zur direkten Bewerbung (optional)"name="blink" maxlength="50" value="">
                             </label>
                         </div>
+             
                     </div>
 
                     <div class="row">
@@ -113,7 +110,7 @@
                         <!--später vllt. erstmal ausgeblendet und erst nach klick eingeblendet?-->
                         <div class="col-md-6">
                             <label>
-                                Adresse der Arbeitsstelle:
+                                &nbsp; &nbsp; Adresse der Arbeitsstelle:
                                 <input type="text" name="aadr" value="">
                             </label>
                         </div>
@@ -146,7 +143,6 @@
                         </div>
                     </div>
                     <!--(Werte später automatisch aus Profil des Arbeitgebers übertragen)-->
-                </section>
                 <hr>
 
                 <section>
@@ -154,6 +150,7 @@
                     <p>
                         Abschlüsse:
                         <!--(Lieber auch als datalist?)--><br>
+                        <label>
                         <label>
                             <input type="checkbox" name="abachelor" value="bachelor"> Bachelor
                         </label>
