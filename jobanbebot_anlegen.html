@@ -41,7 +41,7 @@
             <form action="jobangebot_anzeigen.html" method="post">
                 <section>
                     <h3 class="center">Allgemeine Informationen </h3>
-                    <h4 class="center">Informationen zum Job</h4>
+                    <h4>Informationen zum Job</h4>
                     </section>
         <section>
                     <div class="row">
@@ -104,41 +104,44 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-12 center">
+                        <div class="col-12">
                             <h6>Falls Arbeitstelle nicht der Hauptfirmensitz (optional): </h6>
                         </div>
                         <!--später vllt. erstmal ausgeblendet und erst nach klick eingeblendet?-->
-                        <div class="col-md-6">
-                            <label>
-                                &nbsp; &nbsp; Adresse der Arbeitsstelle:
-                                <input type="text" name="aadr" value="">
-                            </label>
+                        <div class="col-md-3">
+                            Adresse der Arbeitsstelle:  
+                                </div>
+                        
+                        <div class="col-md-3">
+                                <input id= "fields3" type="text" name="aadr" value="">
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label>
+                        <div class="row">
+                        <div class="col-md-3">
                                 PLZ der Arbeitsstelle:
-                                <input type="text" name="aplz" maxlength="5" value="">
-                            </label>
+                        </div>
+                        <div class="col-md-3">
+                                <input id= "fields3" type="text" name="aplz" maxlength="5" value="">
                         </div>
                     </div>
 
-                    <h4 class="center">Informationen zum Unternehmen</h4>
+                    <h4>Informationen zum Unternehmen</h4>
 
                     <div class="row">
-                        <div class="col-md-6 center">
+                        <div class="col-md-6">
                             Firma: ABC GmbH
                         </div>
-                        <div class="col-md-6 center">
+                        <div class="col-md-6">
                             Hauptsitz: ABC Straße 123, 55555 Ort
                         </div>
                     </div>
 
                     <div class="row">
                         <!--später nur angezeigt falls vorhanden?-->
-                        <div class="col-md-6 center">
+                        <div class="col-md-6">
                             (Optional): Kontaktperson: Max Mustermann
                         </div>
-                        <div class="col-md-6 center">
+                        <div class="col-md-6">
                             (Optional): E-Mailadresse: ABC@irgendwas.test
                         </div>
                     </div>
@@ -166,7 +169,7 @@
                         <label>
                             <input type="checkbox" name="ausbildung" value="ausbildung"> Zus. berufliche Ausbildung
                         </label>
-                    </p>
+             
 
                     <!--Später ermöglichen, dass beliebig viele Module + Fähigkeiten angegeben werden.. js?-->
                     <p><label>
