@@ -33,6 +33,10 @@ body {
 }
 
 
+/*body {
+    background-color: #ffffff;
+    text-align: left;
+}*/
 
 
 .img {
@@ -92,11 +96,12 @@ h3 {
     color: #1e1e52;
 }
 
-p {
+/*p {
     text-align: left;
     color: black;
     background-color: white;
-}
+
+}*/
 
 .footer {
     text-align: center;
@@ -112,28 +117,10 @@ p {
 }
 .row > div {
     margin-bottom: 1rem;
+.last_td {
+    margin-bottom: 3rem;
 }
 
-
-input,
-button,
-select,
-optgroup,
-textarea {
-
-    overflow-x: hidden;
-    box-sizing: border-box;
-    cursor: pointer;
-}
-
-#fields1 {
-    width: 78.5%
-}
-
-#fields2 {
-    width: 198%
-}
-
-#fields3 {
-    width: 165%
+.end {
+    text-align: end;
 }
