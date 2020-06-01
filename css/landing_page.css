@@ -26,18 +26,16 @@
 
 .center1{
     text-align: center;
+    background-color: lightgray;
+    opacity: 0.5;
 }
 
-.right {
-    position: absolute;
-    right: 0px;
-    width: 300px;
-    border: 3px solid #000000;
-    padding: 10px;
-}
 
 html,
 body{
+    background-image: url(../bilder/background_landing_page.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 110%;
     overflow-x: hidden;  
 }
 
@@ -46,18 +44,38 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 100%;
+    height: 40%;
 }
 
+span {
+    display: inline;
+}
+
+span:before {
+    content: "\a ";
+    white-space: pre;
+}
+
+section {
+    display: block;
+    padding: inherit margin: auto
+}
 
 .adiv {
     background-color: #ededed;
+    margin: 10px;
+    padding: 20px;
+
 }
 
 
 .border {
     border: 2px solid #000000;
-    padding: 10px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+
 }
 
 .jumbotron {
@@ -73,6 +91,7 @@ h1 {
     font-size: 300%;
     color: #ededed;
 }
+
 
 h3 {
 
@@ -91,7 +110,6 @@ h3 {
     text-align: center;
     background-color: black;
 }
-
 .container {
     display: flex;
     width: 100%;
@@ -99,6 +117,8 @@ h3 {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(211,211,211,0.5);
 }
 
