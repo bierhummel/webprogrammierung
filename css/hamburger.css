@@ -48,15 +48,15 @@ input#hamburg {
     top: 36px;
 }
 
-#hamburg:checked + div .hamburg .line:nth-child(1) {
+#hamburg:checked + section .hamburg .line:nth-child(1) {
     transform: translateY(12px) rotate(-45deg);
 }
 
-#hamburg:checked + div .hamburg .line:nth-child(2) {
+#hamburg:checked + section .hamburg .line:nth-child(2) {
     opacity: 0;
 }
 
-#hamburg:checked + div .hamburg .line:nth-child(3) {
+#hamburg:checked + section .hamburg .line:nth-child(3) {
     transform: translateY(-12px) rotate(45deg);
 }
 
@@ -74,29 +74,29 @@ input#hamburg {
     }
 
     /*Hamburgertransition abspielen*/
-    div .hamburg .line:nth-child(1) {
+    section .hamburg .line:nth-child(1) {
         transform: translateY(12px) rotate(-45deg);
     }
 
-    div .hamburg .line:nth-child(2) {
+    section .hamburg .line:nth-child(2) {
         opacity: 0;
     }
 
-    div .hamburg .line:nth-child(3) {
+    section .hamburg .line:nth-child(3) {
         transform: translateY(-12px) rotate(45deg);
     }
 
 
     /*Hamburgerfunktionsweise invertieren*/
-    #hamburg:checked + div .hamburg .line:nth-child(1) {
+    #hamburg:checked + section .hamburg .line:nth-child(1) {
         transform: translateY(0px) rotate(0deg);
     }
 
-    #hamburg:checked + div .hamburg .line:nth-child(2) {
+    #hamburg:checked + section .hamburg .line:nth-child(2) {
         opacity: 1;
     }
 
-    #hamburg:checked + div .hamburg .line:nth-child(3) {
+    #hamburg:checked + section .hamburg .line:nth-child(3) {
         transform: translateY(0px) rotate(0deg);
     }
 
