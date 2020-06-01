@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
+
     <title>OSJB - Login</title>
 </head>
 
@@ -35,9 +36,23 @@
     <div class="row">
         <div class="container col-xl-4 border ">
 
+            <?php
+            $email = (isset($_POST["email"]) && is_string($_POST["email"]))
+? $_POST["email"] : "";
+            $passwort = (isset($_POST["passwort"]) && is_string($_POST["passwort"]))
+? $_POST["passwort"] : "";
+            $ckbox = (isset($_POST["ckbox"]) && is_string($_POST["ckbox"])) ? $_POST["ckbox"] : "";
+
+        $ckbox = htmlspecialchars($ckbox);
+            $email = htmlspecialchars($email);
+            $passwort = htmlspecialchars($passwort);
+            
+            
+            ?>
             <section>
 
-                <form class="was-validated">
+
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
                         <div class="row form-group">
@@ -95,8 +110,35 @@
 
         <div class="container col-xl-4 border">
 
+            <?php
+$name = (isset($_POST["name"]) && is_string($_POST["name"]))
+? $_POST["name"] : "";
+           
+$email1 = (isset($_POST["email1"]) && is_string($_POST["email1"]))
+? $_POST["email1"] : "";
+            
+$passwort1 = (isset($_POST["passwort1"]) && is_string($_POST["passwort1"]))
+? $_POST["passwort1"] : "";
+ $passwort2 = (isset($_POST["passwort2"]) && is_string($_POST["passwort2"]))
+? $_POST["passwort2"] : "";
+
+$unv = (isset($_POST["unv"]) && 
+       is_string($_POST["unv"])) ? $_POST["unv"] : "";
+   
+$name = htmlspecialchars($name);
+$email1 = htmlspecialchars($email1);
+            $passwort1 = htmlspecialchars($passwort1);
+            $passwort2 = htmlspecialchars($passwort2);
+        $unv = htmlspecialchars($unv);
+            if ($_POST['passwort1']!= $_POST['passwort2'])
+ {
+     echo("Oops! Password did not match! Try again. ");
+ }
+
+?>
+
             <section>
-                <form class="was-validated">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
                     <fieldset>
                         <legend>Registrierung:</legend>
                         <div class="row form-group">
@@ -115,7 +157,7 @@
                             </div>
                             <div class="col-sm">
 
-                                <input type="email" id="r_email" placeholder="Email" name="email" required>
+                                <input type="email" id="r_email" placeholder="Email" name="email1" required>
                             </div>
                         </div>
                         <div class="row form-group">
@@ -124,7 +166,7 @@
                             </div>
                             <div class="col-sm">
 
-                                <input type="password" id="r_passwort" placeholder="Passwort" name="passwort" minlength="8" required>
+                                <input type="password" id="r_passwort" placeholder="Passwort" name="passwort1" minlength="8" required>
                             </div>
                         </div>
 
@@ -163,71 +205,6 @@
         </div>
 
     </div>
-
-    <!--waels version
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-6 border">
-                <section>
-                    <form action="/action_page.php">
-                        <fieldset>
-                            <legend>Log in:</legend>
-                            <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="email" id="email" placeholder="Email" name="email" required><br><br>
-                            <label for="passwort">Passwort:&nbsp;</label>
-                            <input type="password" id="passwort" placeholder="Passwort" name="passwort" value="" required><br><br>
-                            <div class="form-check">
-
-                                <input type="checkbox" class="custom-control-input" id="customCheck" name="ckbox"><br>
-                                <label class="custom-control-label" for="customCheck">Angemeldet bleiben</label><br><br>
-                            </div>
-                            <input type="submit" class="btn btn-primary" value="Login">
-                            <a href="profil.html">Login</a>
-                            !--(Submit soll auf entsprechende Profil weiterleiten.. js? Bis dahin auch als Link)---
-                            <br><br>
-                            <input type="button" class="btn btn-light" value="Passwort vergessen"><br><br>
-                        </fieldset>
-                    </form>
-                </section>
-            </div>
-
-            <section>
-                <div class="container-fluid col-xl-6 border adiv right">
-                    <form action="/action_page.php">
-                        <fieldset>
-                            <legend>Registrierung:</legend>
-                            <label for="name">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="text" id="name" placeholder="Name" name="name" required><br><br>
-                            <label for="r_email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="email" id="r_email" placeholder="Email" name="email" required><br><br>
-                            <label for="r_passwort">Passwort:&nbsp;</label>
-                            <input type="password" id="r_passwort" placeholder="Passwort" name="passwort" minlength="8" required><br><br>
-                            <label for="r_passwort2">Passwort bestätigen:&nbsp;</label>
-                            <input type="password" id="r_passwort2" placeholder="Passwort" name="passwort2" minlength="8" required><br><br>
-
-                            <p><label>
-                                    <select name="unv" size="1" required>
-                                        <option value="">Unternehemensverzeichnis</option>
-                                        <option value="test">test</option>
-                                        <option value="test2">test2</option>
-                                    </select>
-                                </label></p>
-
-                            <input type="submit" class="btn btn-primary" value="Registrieren">
-                            <a href="profil.html">Registrieren</a>
-                            !--(Submit soll auf neues Profil weiterleiten.. js? Bis dahin auch als Link)--
-                            <br><br>
-                        </fieldset>
-                    </form>
-                </div>
-
-            </section>
-        </div>
-        <br><br> <br><br>
-
-
-    </div>
--->
 
     <footer>
         <hr>

@@ -25,8 +25,10 @@
                         </a>
                     </nav>
                 </div>
-                <div class="col-11">
+                <div class="col-10">
                     <h1 class="center">Jobanzeige erstellen</h1><br>
+                </div>
+                <div class="col-1">
                 </div>
             </div>
         </header>
@@ -35,23 +37,14 @@
     <div class="container border">
         <section>
             <!--Annordung der Inputfelder in ein passendes responsives Grid-Layout fehlt noch-->
-            
-            <form action="/action_page.php" method="post">
+
+            <form action="jobangebot_anzeigen.html" method="post">
                 <section>
                     <h3 class="center">Allgemeine Informationen </h3>
                     <h4 class="center">Informationen zum Job</h4>
 
-                    <p><label>
-                            <input type="text" name="jbez" maxlength="50" value="" placeholder="Jobbezeichnung" required>
-                        </label></p>
-
-                    <p><label>
-                            <input type="date" name="jdate" value="" required>
-                            <!--später min=(heute)-->
-                            Frühster Beginn der Beschäftigung
-                        </label></p>
-
-                    <p><label>
+                    <div class="row">
+                        <div class="col-md-6">
                             <select class="form-control" name="fachrichtung" size="1" required>
                                 <option value="">Beschäftigunsart</option>
                                 <option value="fr1">Festanstellung</option>
@@ -61,9 +54,16 @@
                                 <option value="fr5">Volontarioat</option>
                                 <option value="fr6">Minijob</option>
                             </select>
-                        </label></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label> Jobbezeichnung:
+                                <input type="text" name="jbez" maxlength="50" value="" placeholder="Jobbezeichnung" required>
+                            </label>
+                        </div>
+                    </div>
 
-                    <p><label>
+                    <div class="row">
+                        <div class="col-lg-6">
                             <select class="form-control" name="fachrichtung" size="1" required>
                                 <option value="">Fachrichtung auswählen</option>
                                 <option value="fr1">Bildungs- und Sozialwissenschaften</option>
@@ -73,44 +73,79 @@
                                 <option value="fr5">Mathematik und Naturwissenschaften</option>
                                 <option value="fr6">Medizin und Gesundheitswissenschaften</option>
                             </select>
-                        </label></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <label>
+                                <!--später min=(heute)-->
+                                Frühster Beginn der Beschäftigung:
+                                <input type="date" name="jdate" value="" required>
+                            </label>
+                        </div>
+                    </div>
 
-                    <p>
-                        Zeitintesität:
-                        <label>
-                            <input type="checkbox" name="teilzeit" value="Teilzeit"> Teilzeit
-                        </label>
-                        <label>
-                            <input type="checkbox" name="vollzeit" value="Vollzeit"> Vollzeit
-                        </label>
-                        <label>
-                            <input type="checkbox" name="20h" value="20h"> max. 20h/Woche
-                        </label>
-                        <!--Später mindestens eine Angabe required festlegen.. js?-->
-                    </p>
+                    <div class="row">
+                        <div class="col-xl-1 col-md-2">
+                            Zeitintesität:
+                        </div>
+                        <div class="col-xl-5 col-md-4">
+                            <!--Später mindestens eine Angabe required festlegen.. js?-->
+                            <label>
+                                <input type="checkbox" name="teilzeit" value="Teilzeit"> Teilzeit
+                            </label>
+                            <label>
+                                <input type="checkbox" name="vollzeit" value="Vollzeit"> Vollzeit
+                            </label>
+                            <label>
+                                <input type="checkbox" name="20h" value="20h"> max. 20h/Woche
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label title="Geben Sie hier einen Link zu Ihrem firmeneigenen Bewerbungsportal ein">
+                                Link zur direkten Bewerbung (optional): <input type="text" name="blink" maxlength="50" value="">
+                            </label>
+                        </div>
+                    </div>
 
-                    <p>Falls Arbeitstelle nicht der Hauptfirmensitz (optional): <br>
-                        <label>
-                            Adresse der Arbeitsstelle:
-                            <input type="text" name="aadr" value="">
-                        </label>
-                        <br>
-                        <label>
-                            PLZ der Arbeitsstelle:
-                            <input type="text" name="aplz" maxlength="5" value="">
-                        </label>
-                    </p>
-
-                    <p><label>
-                            Link zur direkten Bewerbung (optional): <input type="text" name="blink" maxlength="50" value="">
-                        </label></p>
+                    <div class="row">
+                        <div class="col-12 center">
+                            <h6>Falls Arbeitstelle nicht der Hauptfirmensitz (optional): </h6>
+                        </div>
+                        <!--später vllt. erstmal ausgeblendet und erst nach klick eingeblendet?-->
+                        <div class="col-md-6">
+                            <label>
+                                Adresse der Arbeitsstelle:
+                                <input type="text" name="aadr" value="">
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <label>
+                                PLZ der Arbeitsstelle:
+                                <input type="text" name="aplz" maxlength="5" value="">
+                            </label>
+                        </div>
+                    </div>
 
                     <h4 class="center">Informationen zum Unternehmen</h4>
-                    <p>Firma: ABC GmbH</p>
-                    <p>Hauptsitz: ABC Straße 123, 55555 Ort</p>
-                    <p>(Optional): Kontaktperson: Max Mustermann</p>
-                    <p>(Optional): E-Mailadresse: ABC@irgendwas.test</p>
-                    <p>(Werte automatisch aus Profil des Arbeitgebers übertragen)</p>
+
+                    <div class="row">
+                        <div class="col-md-6 center">
+                            Firma: ABC GmbH
+                        </div>
+                        <div class="col-md-6 center">
+                            Hauptsitz: ABC Straße 123, 55555 Ort
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!--später nur angezeigt falls vorhanden?-->
+                        <div class="col-md-6 center">
+                            (Optional): Kontaktperson: Max Mustermann
+                        </div>
+                        <div class="col-md-6 center">
+                            (Optional): E-Mailadresse: ABC@irgendwas.test
+                        </div>
+                    </div>
+                    <!--(Werte später automatisch aus Profil des Arbeitgebers übertragen)-->
                 </section>
                 <hr>
 
