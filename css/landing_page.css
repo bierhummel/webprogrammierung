@@ -26,11 +26,16 @@
 
 .center1{
     text-align: center;
+    background-color: lightgray;
+    opacity: 0.5;
 }
 
 
 html,
 body{
+    background-image: url(../bilder/background_landing_page.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 110%;
     overflow-x: hidden;  
 }
 
@@ -105,7 +110,6 @@ h3 {
     text-align: center;
     background-color: black;
 }
-
 .container {
     display: flex;
     width: 100%;
