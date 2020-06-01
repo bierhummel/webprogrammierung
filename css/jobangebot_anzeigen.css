@@ -1,13 +1,6 @@
 @charset "utf 8";
 @import url('https://fonts.googleapis.com/css2?family=Raleway');
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
-}
-
 .header {
     text-align: center;
     padding: 20px;
@@ -28,10 +21,16 @@
     text-align: center;
 }
 
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #000000;
+    padding: 10px;
+}
 
 html,
 body{
-    background-color: #256f64;
     overflow-x: hidden;  
 }
 
@@ -40,38 +39,18 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    height: 40%;
+    width: 40%;
 }
 
-span {
-    display: inline;
-}
-
-span:before {
-    content: "\a ";
-    white-space: pre;
-}
-
-section {
-    display: block;
-    padding: inherit margin: auto
-}
 
 .adiv {
     background-color: #ededed;
-    margin: 10px;
-    padding: 20px;
-
 }
 
 
 .border {
     border: 2px solid #000000;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-
+    padding: 10px;
 }
 
 .jumbotron {
@@ -87,7 +66,6 @@ h1 {
     font-size: 300%;
     color: #ededed;
 }
-
 
 h3 {
 
@@ -108,14 +86,9 @@ h3 {
 }
 
 .container {
-    display: flex;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    position: relative;
     margin-right: auto;
     margin-left: auto;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(211,211,211,0.5);
 }
 
