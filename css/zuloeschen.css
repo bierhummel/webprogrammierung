@@ -1,10 +1,4 @@
 @charset "utf 8";
-@import url('https://fonts.googleapis.com/css2?family=Raleway');
-
-.header {
-    text-align: center;
-    padding: 20px;
-}
 
 .search {
     margin: auto;
@@ -12,13 +6,15 @@
     padding: 10px;
     margin-bottom: 2rem;
 }
-
 .center {
     text-align: center;
 }
 
-.center1{
+
+.header {
+    background-color: #becbed;
     text-align: center;
+    padding: 20px;
 }
 
 .right {
@@ -29,10 +25,10 @@
     padding: 10px;
 }
 
-html,
-body{
-    overflow-x: hidden;  
-}
+/*body {
+    background-color: #ffffff;
+    text-align: left;
+}*/
 
 
 .img {
@@ -47,24 +43,21 @@ body{
     background-color: #ededed;
 }
 
-
 .border {
     border: 2px solid #000000;
     padding: 10px;
 }
 
 .jumbotron {
-    font-family: 'Raleway' sans-serif;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    background-color: #67b2a4;
-    border-radius: 0.3rem;
+    /*padding: 2rem 1rem;
+    margin-bottom: 2rem;*/
+    background-color: #3e2eb5;
 }
 
 h1 {
 
     font-size: 300%;
-    color: #ededed;
+    color: white;
 }
 
 h3 {
@@ -82,28 +75,12 @@ h3 {
 
 .footer {
     text-align: center;
-    background-color: black;
 }
 
-.container {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: rgba(211,211,211,0.5);
-}
-
-.row > div {
-    margin-bottom: 1rem;
-}
-    
 .last_td {
     margin-bottom: 3rem;
 }
 
 .end {
     text-align: end;
-}
-
-p {
-    
 }
