@@ -1,5 +1,7 @@
 @charset "utf 8";
 
+/*offene Problematik: Wird ein kleines Fenster mit geöffneter Sidebar vergrößert, wird die Sidebar automatisch geschlossen.. schlimm?*/
+
 /*auf kleinen Bildschirmen aside ausgeblendet*/
 aside {
     display: none;
