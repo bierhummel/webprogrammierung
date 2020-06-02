@@ -17,6 +17,15 @@
 </head>
 
 <body>
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--    
     <div class="container-fluid jumbotron">
         <header>
                     <p style="float:left; padding-top:50px;">
@@ -30,10 +39,11 @@
        
                
                 
-                <!--Link zurück zur letzten Seite (später über javascript). So lange Übergansweise immer zur Startseite-->
 <br>
         </header>
     </div>
+    -->
+    
     <!-- <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>

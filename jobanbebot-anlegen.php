@@ -14,12 +14,20 @@
 </head>
 
 <body class ="background_anlegen">
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "Jobangebot anlegen";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--        
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
                 <div class="col-1">
                     <nav>
-                        <!--Link zurück zum aktuell eingeloggten Profil-->
                         <a href="profil.html">
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
                         </a>
@@ -33,6 +41,7 @@
             </div>
         </header>
     </div>
+    -->
 
     <div class="container border">
         <section>

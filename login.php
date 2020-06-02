@@ -15,12 +15,20 @@
 </head>
 
 <body>
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "OSJB - Anmelden";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--               
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
                 <div class="col-1">
-                    <nav>
-                        <!--Link zurück zur letzten Seite (später über javascript). So lange Übergansweise immer zur Startseite-->
+                    <nav>                        
                         <a href="index.html">
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
                         </a>
@@ -32,6 +40,7 @@
             </div>
         </header>
     </div>
+    -->
 
     <!--Später über Javascript vllt nur eins von beiden anzeigen lassen und über knopf Ansicht wechseln-->
     <div class="container_for_login">

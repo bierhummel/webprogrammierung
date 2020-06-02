@@ -15,13 +15,20 @@
 
 <body class="background_index">
     
-    <!--<div class="container-fluid jumbotron">-->
-        <header class="container-fluid jumbotron">
-            <h1 class="center">
-                OSJB -Die Oldenburger Studenten-Jobbörse
-            </h1>
-        </header>
-    <!---</div>--->
+    <!--Header über header.php-->
+    <?php
+        $title = "OSJB -Die Oldenburger Studenten-Jobbörse";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--
+    <header class="container-fluid jumbotron">
+        <h1 class="center">
+            OSJB -Die Oldenburger Studenten-Jobbörse
+        </h1>
+    </header>  
+    -->
 
     <div class="container border">
         <section>

@@ -14,12 +14,21 @@
 </head>
 
 <body>
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "Impressum, AGB und Datenschutz";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--      
+    
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
                 <div class="col-1">
                     <nav>
-                        <!--Link zurück zur letzten Seite (später über Javascript). So lange Übergangsweise immer zur Startseite-->
                         <a href="index.html" >
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
                         </a>
@@ -33,6 +42,7 @@
             </div>
         </header>
     </div>
+    -->
     
     <div class="container border">
         <section>

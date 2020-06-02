@@ -15,6 +15,15 @@
 </head>
 
 <body>
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "Suchergebnisse";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--               
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
@@ -31,6 +40,7 @@
             </div>
         </header>
     </div>
+    -->
 
     <div class="container">
         <div class="row">

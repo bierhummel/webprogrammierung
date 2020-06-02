@@ -14,12 +14,21 @@
 </head>
 
 <body>
+    
+    <!--Header über header.php-->
+    <?php
+        $title = "Jobangebot";
+        include "php/header.php";
+    ?>
+    
+    <!--vorheriger Header-->
+    <!--       
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
                 <div class="col-1">
                     <nav>
-                        <!--Link zurück zur letzten Seite (entweder Suchergebnisse oder eingeloggtes Profil später über javascript). So lange Übergansweise immer zu Suchergebnissen-->
+               
                         <a href="suchergebnisse.html">
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
                         </a>
@@ -31,6 +40,7 @@
             </div>
         </header>
     </div>
+    -->
 
     <div class="container border">
         <div class="row">
