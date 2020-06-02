@@ -133,7 +133,24 @@ h3 {
     background-color: rgba(211,211,211,0.6);
 }
 
+.goright {}
 
+.foto {
+    display: block;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-bottom: 1.5rem;
+
+}
+
+span {
+    display: inline;
+}
+
+span:before {
+    content: "\a ";
+    white-space: pre;
+}
 
 .row > div {
     margin-bottom: 1rem;
@@ -152,4 +169,28 @@ h3 {
     background-repeat:no-repeat;
     background-size: 100% 110%;
     overflow-x: hidden;  
+}
+
+.background_login{
+    background-image: url(../bilder/oldb_background_about.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% 110%;
+    overflow-x: hidden;  
+}
+
+
+input,
+button,
+select,
+optgroup,
+textarea {
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+section {
+    display: block;
+    padding: inherit margin: auto
 }
