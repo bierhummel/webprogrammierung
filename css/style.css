@@ -35,14 +35,13 @@ html,
 body{
     overflow-x: hidden;  
 }
-.goright {}
 
-.foto {
+
+.img {
     display: block;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    margin-bottom: 1.5rem;
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 .img_about {

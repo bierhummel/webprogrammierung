@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/Queries.css">
 
     <title>OSJB - Login</title>
 </head>
@@ -49,55 +50,16 @@
                                 <input type="checkbox" class="custom-control-input" id="customCheck" name="ckbox"><br>
                                 <label class="custom-control-label" for="customCheck">Angemeldet bleiben</label><br><br>
                             </div>
-                            <div class="col-sm">
-
-                                <input type="email" id="email" placeholder="Email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Bitte ausfüllen </div>
-
-
-                        <div class="row form-group">
-
-                            <div class="col-sm">
-
-                                <label for="passwort">Passwort:</label>
-                            </div>
-
-                            <div class="col-sm">
-
-                                <input type="password" id="passwort" placeholder="Passwort" name="passwort" value="" required>
-
-                            </div>
-                        </div>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Bitte ausfüllen.</div>
-                        <div class="form-check d-flex align-items-end flex-column">
-
-
-                            <input type="checkbox" class="custom-control-input" id="customCheck" name="ckbox">
-                            <label class="custom-control-label" for="customCheck">Angemeldet bleiben</label>
-                        </div>
-                        <div class="form-check  d-flex align-items-end flex-column ">
-
-                            <input type="submit" class="btn btn-primary m-2 " value="Login">
-                            <!-- <a href="profil.html">Login</a>-->
-                        </div>
-                        <div class="form-check d-flex align-items-end flex-column">
-
+                            <input type="submit" class="btn btn-primary" value="Login">
+                            <a href="profil.html">Login</a>
                             <!--(Submit soll auf entsprechende Profil weiterleiten.. js? Bis dahin auch als Link)--->
-
-                            <input type="button" class="btn btn-light  " value="Passwort vergessen">
-                        </div>
-                    </fieldset>
-                </form>
+                            <br><br>
+                            <input type="button" class="btn btn-light" value="Passwort vergessen"><br><br>
+                        </fieldset>
+                    </form>
+                </div>
             </section>
-        </div>
-
-        <div class="container col-xl-4 border">
-
+            
             <section>
                 <div class="col border">
                     <form action="/action_page.php">
@@ -112,36 +74,6 @@
                             <label for="r_passwort2">Passwort bestätigen:&nbsp;</label>
                             <input type="password" id="r_passwort2" placeholder="Passwort" name="passwort2" minlength="8" required><br><br>
 
-
-                                <label for="r_email">Email:</label>
-                            </div>
-                            <div class="col-sm">
-
-                                <input type="email" id="r_email" placeholder="Email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm">
-                                <label for="r_passwort">Passwort:</label>
-                            </div>
-                            <div class="col-sm">
-
-                                <input type="password" id="r_passwort" placeholder="Passwort" name="passwort" minlength="8" required>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-sm">
-
-
-                                <label for="r_passwort2">Passwort bestätigen:</label>
-                            </div>
-                            <div class="col-sm">
-
-                                <input type="password" id="r_passwort2" placeholder="Passwort" name="passwort2" minlength="8" required>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-end flex-column">
                             <p><label>
                                     <select name="unv" size="1" required>
                                         <option value="">Unternehemensverzeichnis</option>
@@ -149,10 +81,6 @@
                                         <option value="test2">test2</option>
                                     </select>
                                 </label></p>
-
-                        </div>
-                        <div class="form-group d-flex align-items-end flex-column">
-
 
                             <input type="submit" class="btn btn-primary" value="Registrieren">
                             <a href="profil.html">Registrieren</a>
