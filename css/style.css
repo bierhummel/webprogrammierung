@@ -90,8 +90,12 @@ h3 {
 }*/
 
 .footer {
-    text-align: center;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    color: aquamarine;
     background-color: black;
+    text-align: center;
 }
 
 .container {
@@ -99,6 +103,7 @@ h3 {
     margin-right: auto;
     margin-left: auto;
     background-color: rgba(211,211,211,0.5);
+    padding-bottom: 100px;
 }
 
 .container_for_login {
@@ -106,6 +111,7 @@ h3 {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+     padding-bottom: 100px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -118,8 +124,12 @@ h3 {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 100px;
     margin-right: auto;
     margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211,211,211,0.5);
 }
 
 
@@ -134,10 +144,6 @@ h3 {
 
 .end {
     text-align: end;
-}
-
-p {
-    
 }
 
 .background_index{
