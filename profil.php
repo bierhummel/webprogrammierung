@@ -1,7 +1,10 @@
+<?php
+    include('php/config-login.php');
+    
+    include('php/calc-job.php');
+?>
+
 <!doctype html>
-
-<?php include('php/calc-job.php'); ?>
-
 <html lang="de">
 <head>
     <meta charset="utf-8">
@@ -21,83 +24,125 @@
         include "php/header.php";
     ?>
     
-    <div class="container border">
-        <section>
-            <!--Annordung der Informationen/Inputs in ein passendes responsives Grid-Layout fehlt noch-->
-            <form action="php/config-profil.php" method="post">
-                <fieldset>
-                    <legend class="center">Profil von xy:</legend>
-                    <label for="name">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" id="name" name="name" readonly>
-                    <br><br>
+     <div class="container-fluid">
+        <div class="container border">
+            <section>
+                <form action="php/config-profil.php" method="post">
+                    <legend class="center">Profil von (Name):</legend>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="name">Name:</label>
+                        </div>                        
+                        <div class="col-sm">
+                            <input type="text" id="name" name="name" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <div class="col-sm">
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
 
-                    <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="email" id="email" name="email">
-                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
-                    <br><br>
+                    <div class="row form-group">
+                        <div class="col-sm">    
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <div class="col-sm">
+                            <label for="password">Passwort:&nbsp;&nbsp;</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="password" id="password" name="passwort">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4>Adresse:
+                            <!-- <input type="button" value="Bearbeiten" class="btn btn-secondary"-->
+                        </h4>
+                    </div>
 
-                    <label for="password">Passwort:&nbsp;&nbsp;</label>
-                    <input type="password" id="password" name="password">
-                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
+                    <div class="row form-group">
+                        <div class="col-sm">
+                            <label for="straße">Straße und Hausnummer:</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" id="straße" name="straße">
+                        </div>
+                    </div>
 
-                    <h4>Adresse: <input type="button" value="Bearbeiten" class="btn btn-secondary"></h4>
-                    <label for="straße">Straße und Hausnummer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" id="straße" name="straße">
-                    <br><br>
+                    <div class="row form-group">
+                        <div class="col-sm">
+                            <label for="plz">PLZ:</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="number" id="plz" name="plz">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <div class="col-sm">
+                            <label for="stadt">Stadt:</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" id="stadt" name="stadt">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="button" value="Bearbeiten" class="btn btn-secondary">
+                    </div>
+                    
+                    <div class="form-group ">
+                        <input type="submit" value="Absenden" name="ab" class="btn btn-primary">
+                    </div>
+                </form>
+            </section>
+        </div>
 
-                    <label for="plz">PLZ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="number" id="plz" name="plz">
-                    <br><br>
+        <div class="container border">
+            <section>
+                <h4 class="center">Meine Anzeigen</h4>
+                <p>
+                    <a href="jobangebot-anlegen.php" class="btn btn-primary">Anzeige erstellen</a>
+                </p>
 
-                    <label for="stadt">Stadt:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    <input type="text" id="stadt" name="stadt"><br><br>
+                <?php 
+                    $count = 0;
+                    foreach($jobs as $job): 
+                        extract($job);
+                        $count++;
+                ?>
 
-                    <input type="button" value="Absenden" class="btn btn-primary"><br><br>
+                <div class="border">
+                    <a href="jobangebot-anzeigen.php?id=<?php echo($id)?>"> <?php echo($bez)?></a>
+                    (Datum an dem Jobangebot erstellt wurde)
+                    (Jobangeobt aktiv/inaktiv)
 
-                </fieldset>
-            </form><br>
-        </section>
+                    <a href="jobangebot-anlegen.php?id=<?php echo($id)?>" class="btn btn-secondary">Bearbeiten</a>
 
-        <section>
-            <h4 class="center">Meine Anzeigen</h4>
+                    <a href="profil.php?del=1&id=<?php echo($id)?>" class="btn btn-light">Löschen</a>
+                </div>
 
-            <p>
-                <a href="jobangebot-anlegen.php" class="btn btn-primary">Anzeige erstellen</a>
-            </p>
+                <?php endforeach; ?>
 
-            <?php 
-                $count = 0;
-                foreach($jobs as $job): 
-                    extract($job);
-                    $count++;
-            ?>
-            
-            <div class="border">
-  
-                <a href="jobangebot-anzeigen.php?id=<?php echo($id)?>"> <?php echo($bez)?></a>
-                (Datum an dem Jobangebot erstellt wurde)
-                (Jobangeobt aktiv/inaktiv)
+                <p class="center">Ende der Liste. Es wurden <?php echo $count ?> Jobangebote gefunden.</p>
 
-                <a href="jobangebot-anlegen.php?id=<?php echo($id)?>" class="btn btn-secondary">Bearbeiten</a>
-
-                <a href="profil.php?del=1&id=<?php echo($id)?>" class="btn btn-light">Löschen</a>
-
-            </div>
-            
-            <?php endforeach; ?>
-            
-            <p class="center">Ende der Liste. Es wurden <?php echo $count ?> Jobangebote gefunden.</p>
-            
-            
-            
-    
-
-        </section>
+            </section>
+        </div>
     </div>
 
     <?php
         include "php/footer.php";
     ?>
 </body>
-
 </html>
