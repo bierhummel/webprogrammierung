@@ -50,7 +50,7 @@ session_start();
 
                 <?php
                 
-                            if(isset($_post['log'])){
+                            if(isset($_post['ab'])){
 
 $name = (isset($_POST["name"]) && is_string($_POST["name"]))
 ? $_POST["name"] : "";
@@ -171,7 +171,7 @@ $email = htmlspecialchars($email);
                     </div>
                     <div class="form-group ">
 
-                        <input type="button" value="Absenden" class="btn btn-primary">
+                        <input type="button" value="Absenden" name="ab" class="btn btn-primary">
 
                     </div>
 

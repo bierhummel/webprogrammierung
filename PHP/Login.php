@@ -49,7 +49,7 @@ session_start();
             $emaildummy = "wael.hikal@uol.de";
                             $passdummy = "12345678";
 
-            if(isset($_post['log'])){
+            if(isset($_POST['log'])){
                 
             $email = (isset($_POST["email"]) && is_string($_POST["email"]))
 ? $_POST["email"] : "";
@@ -57,16 +57,14 @@ session_start();
 ? $_POST["passwort"] : "";
             $ckbox = (isset($_POST["ckbox"]) && is_string($_POST["ckbox"])) ? $_POST["ckbox"] : "";
                 
-                                    }
 
         $ckbox = htmlspecialchars($ckbox);
             $email = htmlspecialchars($email);
             $passwort = htmlspecialchars($passwort);
                  if ($email == $emaildummy and $passwort == $passdummy){
                     if ( isset($_POST['ckbox'])){
-                        
-                        setcookie('email', $email, time()+60*60*7);
-                                                    setcookie('passwort', $passwort, time()+60*60*7);
+                                    setcookie('email', $email, time()+60*60*7);
+                                    setcookie('passwort', $passwort, time()+60*60*7);
 
                     }
                     session_start();
@@ -75,13 +73,10 @@ session_start();
                     echo "Willkommen";
 
                     
-                }else{ echo "email oder passwort ist  ungültig ";
-                     }
-                else{
-                    header("location: index.php");                    }
-
-            
+                }else{ echo "email oder passwort ist  ungültig ";}
             }
+            
+           
             ?>
             <section>
 
@@ -146,7 +141,7 @@ session_start();
 
             <?php
             
-                        if(isset($_post['reg'])){
+                        if(isset($_POST['reg'])){
 
 $name = (isset($_POST["name"]) && is_string($_POST["name"]))
 ? $_POST["name"] : "";
@@ -178,10 +173,6 @@ $email1 = htmlspecialchars($email1);
                                      echo("Name oder Email ist bereits vorhanden ");
 
                             }
-                                                header("location: index.php");       
-                            echo("Willkommen auf unsere Seite ");
-                            
-                        
 
                         }
 ?>
