@@ -255,21 +255,19 @@ session_start();
                         </div>                                            
                     </div>
                 </section>
-
-                <section>
-                    <div class="row end">
-                        <div class="col-md-4 col-lg-6">
-                        </div>
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <button class="btn btn-secondary" type="button">Vorschau</button> <!---(Soll eine Vorschau anzeigen)-->                            
-                        </div>
-                        
-                        <div class="col-6 col-md-4 col-lg-3">
-                            <input type="submit" class="btn btn-primary" name="submit_n_job" value="Jobanzeige erstellen"> <!---(Danach Jobangebot anzeigen)--->
-                        </div>
+                
+                <div class="row end">
+                    <div class="col-md-4 col-lg-6">
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <button class="btn btn-secondary" type="button">Vorschau</button> <!--(Soll eine Vorschau anzeigen)-->                            
                     </div>
 
-                </section>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <input type="submit" class="btn btn-primary" name="submit_n_job" value="Jobanzeige erstellen"> <!---(Danach Jobangebot anzeigen)-->
+                    </div>
+                </div>
+                
             </form>
         </section>
     </div>

@@ -76,7 +76,7 @@ include('php/config-reg.php');
                         </div>
                         <div class="form-check d-flex align-items-end flex-column">
 
-                            <!--(Submit soll auf entsprechende Profil weiterleiten.. js? Bis dahin auch als Link)--->
+                            <!--(Submit soll auf entsprechende Profil weiterleiten.. js? Bis dahin auch als Link)-->
 
                             <input type="button" class="btn btn-light  " value="Passwort vergessen">
                         </div>

@@ -28,7 +28,7 @@ include('php/calc-job.php');
         <div class="container border">
             <section>
                 <form action="php/config-profil.php" method="post">
-                    <legend class="center">Profil von (Name):</legend>
+                    <h3 class="center mb-3">Profil von (Name):</h3>
                     <div class="row form-group">
                         <div class="col">
                             <label for="name">Name:</label>
