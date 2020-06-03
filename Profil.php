@@ -46,7 +46,7 @@ include('configlogin.php');
 
 
 
-                <form action="configlogin.php" method="post">
+                <form action="configprofil.php" method="post">
                     <legend class="center">Profil von xy:</legend>
                     <div class="row form-group">
                         <div class="col">
@@ -137,7 +137,7 @@ include('configlogin.php');
                     </div>
                     <div class="form-group ">
 
-                        <input type="button" value="Absenden" name="ab" class="btn btn-primary">
+                        <input type="submit" value="Absenden" name="ab" class="btn btn-primary">
 
                     </div>
 

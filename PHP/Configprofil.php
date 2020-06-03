@@ -5,7 +5,7 @@ ini_set("session.use_trans_sid", 1);
 session_start();
 
    
-                            if(isset($_POST['ab'])){
+if(isset($_POST['ab'])){
 
 $name = (isset($_POST["name"]) && is_string($_POST["name"]))
 ? $_POST["name"] : "";
@@ -27,12 +27,14 @@ $stadt = (isset($_POST["stadt"]) && is_string($_POST["stadt"]))
    
 $name = htmlspecialchars($name);
 $email = htmlspecialchars($email);
-            $passwort = htmlspecialchars($passwort);
-            $straße = htmlspecialchars($straße);
-                $plz = htmlspecialchars($plz);
-                                $stadt = htmlspecialchars($stadt);
-                            }
-                        }
+ $passwort = htmlspecialchars($passwort);
+$straße = htmlspecialchars($straße);
+$plz = htmlspecialchars($plz);
+                  $stadt = htmlspecialchars($stadt);
+
+    echo " Änderungen wurden vorgenommen";
+}
+
             
            
 ?>
