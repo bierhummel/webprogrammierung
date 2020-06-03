@@ -37,7 +37,7 @@ session_start();
                     Unser Ziel
                 </h2>
                 <p>
-                    <img src="bilder/about.png" class="img-fluid mx-auto d-block rounded img_about" alt="text"><br>
+                    <img src="bilder/about.png" class="img-fluid mx-auto d-block rounded img_about mb-3" alt="text">
 
 
                     Unser Ziel ist es, Studierenden und Absolventen dabei zu helfen,
@@ -56,7 +56,7 @@ session_start();
                     Wie funktioniert's?
                 </h2>
                 <p>
-                    <img src="bilder/2.jpg" class="img-fluid mx-auto d-block rounded img_about" alt="text"><br>
+                    <img src="bilder/2.jpg" class="img-fluid mx-auto d-block rounded img_about mb-3" alt="text">
 
                     Gib einfach auf unserer Startseite deine Postleitzahl, den gewünschten Umkreis und deine Fakultät an, wo du
                     sudierst oder deinen Abschluss gemacht hast. Über die Filterfunktionen kannst du dann die Beschäftigungsart,
@@ -75,7 +75,7 @@ session_start();
                     Für Arbeitgeber
                 </h2>
                 <p>
-                    <img src="bilder/1.jpg" class="img-fluid mx-auto d-block rounded img_about" alt="text"><br>
+                    <img src="bilder/1.jpg" class="img-fluid mx-auto d-block rounded img_about mb-3" alt="text">
 
                     Sofern Sie selbst eine Jobanzeige aufgeben möchten, bitten wir Sie sich zu registrieren und ein Profil zu hinterlegen.
                 </p>
