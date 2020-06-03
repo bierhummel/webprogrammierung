@@ -1,3 +1,8 @@
+<?php
+
+include('configlogin.php');include('configreg.php');
+
+?>
 <!doctype html>
 <html lang="de">
 
@@ -11,25 +16,23 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
+
     <title>OSJB - Login</title>
 </head>
 
-<body class="background_login">
+<body>
 
 
     <div class="container-fluid jumbotron">
         <header>
-            <div class="row">
-                <div class="col-1">
-                    <nav>
-                        <a href="index.html">
-                            <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-11">
-                    <h1 class="center">OSJB - Anmelden</h1>
-                </div>
+            <nav>
+                <!--Link zurück zur letzten Seite (später über javascript). So lange Übergansweise immer zur Startseite-->
+                <a href="index.html">
+                    <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
+                </a>
+            </nav>
+            <div class="col-sm-11">
+                <h1 class="center">OSJB - Anmelden</h1>
             </div>
         </header>
     </div>
@@ -39,21 +42,10 @@
         <div class="container col-xl-4 border ">
 
 
-    <div class="row">
-        <div class="container col-xl-4 border ">
-
             <section>
 
 
-                <form class="was-validated">
-                    <fieldset>
-                        <legend>Log in:</legend>
-                        <div class="row form-group">
-
-                            <div class="col-sm">
-
-                                <label for="email">Email:</label>
-                <form class="was-validated">
+                <form action="configlogin.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
                         <div class="row form-group">
@@ -95,7 +87,7 @@
                         </div>
                         <div class="form-check  d-flex align-items-end flex-column ">
 
-                            <input type="submit" class="btn btn-primary m-2 " value="Login">
+                            <input type="submit" class="btn btn-primary m-2 " name="log" value="Login">
                             <!-- <a href="profil.html">Login</a>-->
                         </div>
                         <div class="form-check d-flex align-items-end flex-column">
@@ -113,12 +105,8 @@
 
 
 
-        </div>
-
-        <div class="container col-xl-4 border">
-
             <section>
-                <form class="was-validated">
+                <form action="configreg.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Registrierung:</legend>
                         <div class="row form-group">
@@ -136,55 +124,6 @@
                                 <label for="r_email">Email:</label>
                             </div>
                             <div class="col-sm">
-
-                                <input type="email" id="r_email" placeholder="Email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm">
-                                <label for="r_passwort">Passwort:</label>
-                            </div>
-                            <div class="col-sm">
-
-                                <input type="password" id="r_passwort" placeholder="Passwort" name="passwort" minlength="8" required>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <div class="col-sm">
-
-
-                                <label for="r_passwort2">Passwort bestätigen:</label>
-                            </div>
-                            <div class="col-sm">
-
-                                <input type="password" id="r_passwort2" placeholder="Passwort" name="passwort2" minlength="8" required>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-end flex-column">
-                            <p><label>
-                                    <select name="unv" size="1" required>
-                                        <option value="">Unternehemensverzeichnis</option>
-                                        <option value="test">test</option>
-                                        <option value="test2">test2</option>
-                                    </select>
-                                </label></p>
-
-                        </div>
-                        <div class="form-group d-flex align-items-end flex-column">
-
-
-                            <input type="submit" class="btn btn-primary" value="Registrieren">
-                            <!--<a href="profil.html">Registrieren</a> -->
-                            <!--(Submit soll auf neues Profil weiterleiten.. js? Bis dahin auch als Link)-->
-                        </div>
-                    </fieldset>
-                </form>
-
-            </section>
-        </div>
-
-    </div>
 
                                 <input type="email" id="r_email" placeholder="Email" name="email1" required>
                             </div>
@@ -223,7 +162,7 @@
                         <div class="form-group d-flex align-items-end flex-column">
 
 
-                            <input type="submit" class="btn btn-primary" value="Registrieren">
+                            <input type="submit" class="btn btn-primary" name="reg" value="Registrieren">
                             <!--<a href="profil.html">Registrieren</a> -->
                             <!--(Submit soll auf neues Profil weiterleiten.. js? Bis dahin auch als Link)-->
                         </div>
@@ -245,6 +184,6 @@
             </p>
         </nav>
     </footer>
-</body></html>
+</body>
 
 </html>
