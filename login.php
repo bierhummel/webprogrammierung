@@ -94,7 +94,7 @@ include('php/config-reg.php');
 
 
             <section>
-                <form action="configreg.php" method="post" class="was-validated">
+                <form action="php/config-reg.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Registrierung:</legend>
                         <div class="row form-group">
