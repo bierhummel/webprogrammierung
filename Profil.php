@@ -1,10 +1,7 @@
 <?php
+include('configlogin.php');
 
-ini_set("session.use_cookies", 1); 
-ini_set("session.use_only_cookies", 0);
-ini_set("session.use_trans_sid", 1);
 
-session_start();
 ?>
 
 <!doctype html>
@@ -48,39 +45,8 @@ session_start();
 
 
 
-                <?php
-                
-                            if(isset($_post['ab'])){
 
-$name = (isset($_POST["name"]) && is_string($_POST["name"]))
-? $_POST["name"] : "";
-           
-$email = (isset($_POST["email"]) && is_string($_POST["email"]))
-? $_POST["email"] : "";
-            
-$passwort = (isset($_POST["passwort"]) && is_string($_POST["passwort"]))
-? $_POST["passwort"] : "";
- $straße = (isset($_POST["straße"]) && is_string($_POST["straße"]))
-? $_POST["straße"] : "";
-                
-$plz = (isset($_POST["plz"]) && is_string($_POST["plz"]))
-? $_POST["plz"] : "";
-$stadt = (isset($_POST["stadt"]) && is_string($_POST["stadt"]))
-? $_POST["stadt"] : "";
-
-
-   
-$name = htmlspecialchars($name);
-$email = htmlspecialchars($email);
-            $passwort = htmlspecialchars($passwort);
-            $straße = htmlspecialchars($straße);
-                $plz = htmlspecialchars($plz);
-                                $stadt = htmlspecialchars($stadt);
-                            }
-
-            
-?>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <form action="configlogin.php" method="post">
                     <legend class="center">Profil von xy:</legend>
                     <div class="row form-group">
                         <div class="col">
@@ -117,7 +83,7 @@ $email = htmlspecialchars($email);
                         </div>
                         <div class="col-sm">
 
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="passwort">
                         </div>
                     </div>
                     <!-- <div class="form-group">

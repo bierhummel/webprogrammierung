@@ -1,10 +1,7 @@
 <?php
 
-ini_set("session.use_cookies", 1); 
-ini_set("session.use_only_cookies", 0);
-ini_set("session.use_trans_sid", 1);
+include('configlogin.php');include('configreg.php');
 
-session_start();
 ?>
 <!doctype html>
 <html lang="de">
@@ -44,44 +41,11 @@ session_start();
     <div class="row">
         <div class="container col-xl-4 border ">
 
-            <?php
-            
-            $emaildummy = "wael.hikal@uol.de";
-                            $passdummy = "12345678";
 
-            if(isset($_POST['log'])){
-                
-            $email = (isset($_POST["email"]) && is_string($_POST["email"]))
-? $_POST["email"] : "";
-            $passwort = (isset($_POST["passwort"]) && is_string($_POST["passwort"]))
-? $_POST["passwort"] : "";
-            $ckbox = (isset($_POST["ckbox"]) && is_string($_POST["ckbox"])) ? $_POST["ckbox"] : "";
-                
-
-        $ckbox = htmlspecialchars($ckbox);
-            $email = htmlspecialchars($email);
-            $passwort = htmlspecialchars($passwort);
-                 if ($email == $emaildummy and $passwort == $passdummy){
-                    if ( isset($_POST['ckbox'])){
-                                    setcookie('email', $email, time()+60*60*7);
-                                    setcookie('passwort', $passwort, time()+60*60*7);
-
-                    }
-                    session_start();
-                    $_SESSION['email']= $email;
-                                        header("location: index.php");
-                    echo "Willkommen";
-
-                    
-                }else{ echo "email oder passwort ist  ungültig ";}
-            }
-            
-           
-            ?>
             <section>
 
 
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
+                <form action="configlogin.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
                         <div class="row form-group">
@@ -139,46 +103,10 @@ session_start();
 
         <div class="container col-xl-4 border">
 
-            <?php
-            
-                        if(isset($_POST['reg'])){
 
-$name = (isset($_POST["name"]) && is_string($_POST["name"]))
-? $_POST["name"] : "";
-           
-$email1 = (isset($_POST["email1"]) && is_string($_POST["email1"]))
-? $_POST["email1"] : "";
-            
-$passwort1 = (isset($_POST["passwort1"]) && is_string($_POST["passwort1"]))
-? $_POST["passwort1"] : "";
- $passwort2 = (isset($_POST["passwort2"]) && is_string($_POST["passwort2"]))
-? $_POST["passwort2"] : "";
-
-$unv = (isset($_POST["unv"]) && 
-       is_string($_POST["unv"])) ? $_POST["unv"] : "";
-   
-$name = htmlspecialchars($name);
-$email1 = htmlspecialchars($email1);
-            $passwort1 = htmlspecialchars($passwort1);
-            $passwort2 = htmlspecialchars($passwort2);
-        $unv = htmlspecialchars($unv);
-            if ($_POST['passwort1']!= $_POST['passwort2'])
- {
-     echo("Passwort nicht übereinstimmen! Versuchen Sie es erneut. ");
- }
-                             $namedummy = "wael";
-                                  $emaildummy = "wael.hikal@uol.de";
-                            if ($email1 == $emaildummy and $name == $namedummy){
-                                
-                                     echo("Name oder Email ist bereits vorhanden ");
-
-                            }
-
-                        }
-?>
 
             <section>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
+                <form action="configreg.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Registrierung:</legend>
                         <div class="row form-group">
