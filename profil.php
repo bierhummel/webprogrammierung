@@ -11,8 +11,6 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/Queries.css">
-
 
     <title>OSJB - Profil</title>
 </head>
@@ -21,55 +19,60 @@
     <div class="container-fluid jumbotron">
         <header>
             <div class="row">
-                <div class="col-3">
+                <div class="col-1">
                     <nav>
                         <!--Link zurück zur letzten Seite (außer login) (später über javascript). So lange Übergansweise immer zur Startseite-->
                         <a href="index.html">
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                        </a>
+                        </a>    
                     </nav>
                 </div>
-                <div class="col-8">
+                <div class="col-11">
                     <h1 class="center">Profil</h1>
                 </div>
             </div>
         </header>
     </div>
-    <div class="container-fluid">
-        <div class="container_for_profile border">
-            <section>
-                <!--Annordung der Informationen/Inputs in ein passendes responsives Grid-Layout fehlt noch-->
-                <form action="/action_page.php">
+    
+    <div class="container border">
+        <section>
+            <!--Annordung der Informationen/Inputs in ein passendes responsives Grid-Layout fehlt noch-->
+            <form action="/action_page.php">
+                <fieldset>
                     <legend class="center">Profil von xy:</legend>
-                    <div class="row form-group">
-                        <div class="col">
+                    <label for="name">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="name" name="name" readonly>
+                    <br><br>
 
-                            <label for="name">Name:</label>
-                        </div>
-                        <div class="col-sm">
+                    <label for="email">Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="email" id="email" name="email">
+                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
+                    <br><br>
 
-                            <input type="text" id="name" name="name" readonly>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-sm">
+                    <label for="password">Passwort:&nbsp;&nbsp;</label>
+                    <input type="password" id="password" name="password">
+                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
 
+                    <h4>Adresse: <input type="button" value="Bearbeiten" class="btn btn-secondary"></h4>
+                    <label for="straße">Straße und Hausnummer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="straße" name="straße">
+                    <br><br>
 
-                            <label for="email">Email:</label>
-                        </div>
-                        <div class="col-sm">
+                    <label for="plz">PLZ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="number" id="plz" name="plz">
+                    <br><br>
 
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
+                    <label for="stadt">Stadt:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <input type="text" id="stadt" name="stadt"><br><br>
 
-                    <!--   <div class="form-group">
+                    <input type="button" value="Absenden" class="btn btn-primary"><br><br>
 
-                       <input type="button" value="Bearbeiten" class="btn btn-secondary"> 
-                    </div> -->
-                    <div class="row form-group">
-                        <div class="col-sm">
+                </fieldset>
+            </form><br>
+        </section>
 
+        <section>
+            <h4 class="center">Meine Anzeigen</h4>
 
             <p>
                 <a href="jobangebot-anlegen.php" class="btn btn-primary">Anzeige erstellen</a>
@@ -104,20 +107,6 @@
 
         </section>
     </div>
-
-                        <input type="button" value="Bearbeiten" class="btn btn-secondary">
-                        <!--  <a href="jobanbebot_anlegen.html">Bearbeiten</a> -->
-                        <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-
-                        <input type="button" value="Löschen" class="btn btn-light">
-                        <!--   <a href="jobanbebot_anlegen.html">Löschen</a> -->
-                        <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-                    </p>
-                </section>
-            </div>
-
-        </div>
-
 
     <footer>
         <hr>

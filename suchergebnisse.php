@@ -34,7 +34,7 @@
         </header>
     </div>
 
-    <div class="container">
+    <div class="container_suchergebnisse">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
                 <!--Hamburger nach Vorlage von https://www.mediaevent.de/tutorial/css-transform.html (Leicht angepasst)-->
