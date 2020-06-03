@@ -24,12 +24,10 @@ session_start();
 
 <body class="background_index">
     
-    <!--<div class="container-fluid jumbotron">-->
     <?php
         $title = "OSJB";
         include "php/header.php";
     ?>
-    <!---</div>--->
 
     <div class="container border">
         <section>

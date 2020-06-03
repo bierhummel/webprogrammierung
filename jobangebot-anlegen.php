@@ -25,6 +25,7 @@ session_start();
 </head>
 
 <body class ="background_anlegen">
+    
     <?php
         $title = "OSJB";
         include "php/header.php";
