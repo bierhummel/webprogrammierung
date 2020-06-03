@@ -16,25 +16,10 @@
 </head>
 
 <body class ="background_anlegen">
-    <div class="container-fluid jumbotron">
-        <header>
-            <div class="row">
-                <div class="col-1">
-                    <nav>
-                        <!--Link zurück zum aktuell eingeloggten Profil-->
-                        <a href="profil.html">
-                            <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-10">
-                    <h1 class="center">Jobanzeige erstellen</h1>
-                </div>
-                <div class="col-1">
-                </div>
-            </div>
-        </header>
-    </div>
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
 
     <div class="container border">
         <section>
@@ -279,16 +264,11 @@
         </section>
     </div>
 
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
+    
+    <?php
+        include "php/footer.php";
+    ?>
+
 </body>
 
 </html>

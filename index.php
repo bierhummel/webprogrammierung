@@ -16,12 +16,10 @@
 <body class="background_index">
     
     <!--<div class="container-fluid jumbotron">-->
-    
-        <header class="container-fluid jumbotron">
-            <h1 class="center">
-                OSJB -Die Oldenburger Studenten-Jobbörse
-            </h1>
-        </header>
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
     <!---</div>--->
 
     <div class="container border">
@@ -71,16 +69,9 @@
         </section>
     </div>
 
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
+    <?php
+        include "php/footer.php";
+    ?>
 </body>
 
 </html>

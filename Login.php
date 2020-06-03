@@ -22,20 +22,10 @@ include('php/configlogin.php');include('php/configreg.php');
 
 <body class="background_login">
 
-
-    <div class="container-fluid jumbotron">
-        <header>
-            <nav>
-                <!--Link zurück zur letzten Seite (später über javascript). So lange Übergansweise immer zur Startseite-->
-                <a href="index.html">
-                    <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                </a>
-            </nav>
-            <div class="col-sm-11">
-                <h1 class="center">OSJB - Anmelden</h1>
-            </div>
-        </header>
-    </div>
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
 
     <!--Später über Javascript vllt nur eins von beiden anzeigen lassen und über knopf Ansicht wechseln-->
     <div class="row">
@@ -174,16 +164,9 @@ include('php/configlogin.php');include('php/configreg.php');
 
     </div>
 
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
+    <?php
+        include "php/footer.php";
+    ?>
 </body>
 
 </html>

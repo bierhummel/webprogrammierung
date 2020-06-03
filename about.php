@@ -26,23 +26,10 @@ session_start();
 </head>
 
 <body>
-    <div class="container-fluid jumbotron">
-        <header>
-                    <p style="float:left; padding-top:50px;">
-                <a href="index.html">
-                    <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                </a>
-            </p>
-                 <h1>
-                    OSJB
-                </h1>
-       
-               
-                
-                <!--Link zurück zur letzten Seite (später über javascript). So lange Übergansweise immer zur Startseite-->
-<br>
-        </header>
-    </div>
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
     <!-- <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -146,15 +133,8 @@ session_start();
 
         </div>
     </div>
+    <?php
+        include "php/footer.php";
+    ?>
 
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
 </body></html>

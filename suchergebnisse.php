@@ -17,22 +17,11 @@
 </head>
 
 <body>
-    <div class="container-fluid jumbotron">
-        <header>
-            <div class="row">
-                <div class="col-1">
-                    <nav>
-                        <a href="index.php">
-                            <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-11">
-                    <h1 class="center">Suchergebnisse</h1>
-                </div>
-            </div>
-        </header>
-    </div>
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
+    
 
     <div class="container_suchergebnisse">
         <div class="row">
@@ -296,17 +285,9 @@
         </div>
     </div>
 
-
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
+    <?php
+        include "php/footer.php";
+    ?>
 </body>
 
 </html>
