@@ -6,6 +6,7 @@ ini_set("session.use_trans_sid", 1);
 
 session_start();
 ?>
+
 <!DOCTYPE HTML>
 <html lang="de">
 
@@ -22,26 +23,12 @@ session_start();
 </head>
 
 <body>
-    <div class="container-fluid jumbotron">
-        <header>
-            <div class="row">
-                <div class="col-1">
-                    <nav>
-                        <!--Link zurück zur letzten Seite (später über Javascript). So lange Übergangsweise immer zur Startseite-->
-                        <a href="index.html">
-                            <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
-                        </a>
-                    </nav>
-                </div>
-                <div class="col-11">
-                    <h1 class="center">
-                        Impressum, AGB und Datenschutz
-                    </h1><br>
-                </div>
-            </div>
-        </header>
-    </div>
-
+    
+    <?php
+        $title = "OSJB";
+        include "php/header.php";
+    ?>
+    
     <div class="container border">
         <section>
             <p>
@@ -55,16 +42,9 @@ session_start();
         </section>
     </div>
 
-    <footer>
-        <hr>
-        <nav>
-            <p class="footer">
-                <a href="impragb.html" class="btn btn-link">AGB - Impressum - Datenschutz</a> |
-                <a href="about.html" class="btn btn-link">Über uns</a> |
-                <a href="login.html" class="btn btn-link">(Anmelden / Abmelden?)</a>
-            </p>
-        </nav>
-    </footer>
-</body>
+    <?php
+        include "php/footer.php";
+    ?>
 
+</body>
 </html>
