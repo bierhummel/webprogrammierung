@@ -1,6 +1,6 @@
 <?php
 
-include('configlogin.php');include('configreg.php');
+include('php/configlogin.php');include('php/configreg.php');
 
 ?>
 <!doctype html>
