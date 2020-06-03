@@ -20,7 +20,7 @@ include('configlogin.php');include('configreg.php');
     <title>OSJB - Login</title>
 </head>
 
-<body>
+<body class="background_login">
 
 
     <div class="container-fluid jumbotron">
