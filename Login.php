@@ -1,8 +1,10 @@
 <?php
 
-include('php/configlogin.php');include('php/configreg.php');
+include('php/config-login.php');
+include('php/config-reg.php');
 
 ?>
+
 <!doctype html>
 <html lang="de">
 
@@ -14,8 +16,6 @@ include('php/configlogin.php');include('php/configreg.php');
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-
 
     <title>OSJB - Login</title>
 </head>
@@ -35,7 +35,7 @@ include('php/configlogin.php');include('php/configreg.php');
             <section>
 
 
-                <form action="configlogin.php" method="post" class="was-validated">
+                <form action="php/config-login.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
                         <div class="row form-group">
@@ -76,9 +76,7 @@ include('php/configlogin.php');include('php/configreg.php');
                             <label class="custom-control-label" for="customCheck">Angemeldet bleiben</label>
                         </div>
                         <div class="form-check  d-flex align-items-end flex-column ">
-
                             <input type="submit" class="btn btn-primary m-2 " name="log" value="Login">
-                            <!-- <a href="profil.html">Login</a>-->
                         </div>
                         <div class="form-check d-flex align-items-end flex-column">
 

@@ -64,7 +64,7 @@
                 </form>
             </div>
             <div>
-                <h3 class="center"><a href="login.html" class="btn btn-primary">Anmeldung/Registrierung für Arbeitgeber</a></h3>
+                <h3 class="center"><a href="login.php" class="btn btn-primary">Anmeldung/Registrierung für Arbeitgeber</a></h3>
             </div>
         </section>
     </div>

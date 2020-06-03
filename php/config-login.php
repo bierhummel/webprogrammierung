@@ -24,7 +24,7 @@ $emaildummy = "wael.hikal@uol.de";
                     }
                     session_start();
                     $_SESSION['email']= $email;
-                                        header("location: index.php");
+                                        header("location: ../index.php");
                     echo "Willkommen";
 
                     

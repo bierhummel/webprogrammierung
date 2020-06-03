@@ -23,7 +23,7 @@
     
     <?php if($job_found === false){ ?>
     
-    <p class="center">Jobangebot existiert nicht</p>
+    <p class="center">Dieses Jobangebot existiert nicht.</p>
     
     <?php } else { ?>
     

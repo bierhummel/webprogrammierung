@@ -1,7 +1,7 @@
 <?php
 
 //Überprüfung der Eingabedaten
-    include('check_inputs.php'); 
+    include('check-inputs.php'); 
     /*$get_checked = check_get($_GET);
     $post_checked = check_get($_POST);*/
     $request_checked = check_inputs($_REQUEST);

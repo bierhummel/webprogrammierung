@@ -24,7 +24,7 @@
     <div class="container border">
         <section>
             <!--Annordung der Informationen/Inputs in ein passendes responsives Grid-Layout fehlt noch-->
-            <form action="/action_page.php">
+            <form action="php/config-profil.php" method="post">
                 <fieldset>
                     <legend class="center">Profil von xy:</legend>
                     <label for="name">Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>

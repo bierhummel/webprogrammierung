@@ -23,7 +23,7 @@
     ?>
     
 
-    <div class="container_suchergebnisse">
+    <div class="container suchergebnisse">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
                 <!--Hamburger nach Vorlage von https://www.mediaevent.de/tutorial/css-transform.html (Leicht angepasst)-->
@@ -212,7 +212,7 @@
                 
                 <p class="center">Ende der Liste. Es wurden <?php echo $count ?> Jobangebote gefunden.</p>
 
-                <!--Restliche Jobangebote nur noch drin um Darstellung der Seite mit etwas mehr Jobangeboten zu zeigen, kommt raus sobald db eingebunden-->
+                <!--Restliche Jobangebote nur noch drin um Darstellung der Seite mit etwas mehr Jobangeboten zu zeigen, kommt raus sobald DB eingebunden-->
                 <section class="border mb-4">
                     <div class="row">
                         <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">

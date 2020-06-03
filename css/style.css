@@ -106,10 +106,11 @@ h3 {
     background-color: rgba(211,211,211,0.5);
 }
 
+/*Auskommentiert weil nicht verstanden :( 
 .container.suchergebnisse{
     position: relative;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; */
     
 }
 .container_for_login {
@@ -170,14 +171,14 @@ span:before {
 }
 
 .background_index{
-    background-image: url(../bilder/background_landing_page.jpg);
+    background-image: url(../bilder/background-landing-page.jpg);
     background-repeat:no-repeat;
     background-size: 100% 110%;
     overflow-x: hidden;  
 }
 
 .background_login{
-    background-image: url(../bilder/oldb_background_about.jpg);
+    background-image: url(../bilder/oldb-background-about.jpg);
     background-repeat:no-repeat;
     background-size: 100% 110%;
     overflow-x: hidden;  
