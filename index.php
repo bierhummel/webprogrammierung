@@ -31,7 +31,7 @@
 
             <!--später die Breite aller Inputfelder einheitlich gestalten, bei dieser Abgabe zeitlich nicht geschafft-->
             <div class="search">
-                <form action="suchergebnisse.php" method="post">
+                <form action="suchergebnisse.php" method="get">
                     <p class="center"><label>
                             <input type="text" name="plz" class="form-control form-control-lg" maxlength="5" value="" placeholder="Deine PLZ" required autofocus>
                             <!--Später mit pattern Attribut absichern?-->
@@ -62,9 +62,7 @@
                             </select>
                         </label></p>
 
-                    <p class="center"> <input type="submit" value="Los!" class="btn btn-outline-primary"> <a href="suchergebnisse.html">Los!</a>
-                        <!--(Submit soll auf entsprechende Ergebnisübersicht weiterleiten.. js? Bis dahin auch als Link)-->
-                    </p>
+                    <p class="center"> <input type="submit" value="Los!" class="btn btn-primary"></p>
                 </form>
             </div>
             <div>

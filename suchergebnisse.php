@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
-<html lang="de">
 
+<?php include('php/calc-job.php'); ?>
+
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +22,7 @@
             <div class="row">
                 <div class="col-1">
                     <nav>
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="bilder/back_button.png" alt="Zurück" width="50" height="50">
                         </a>
                     </nav>
@@ -98,8 +100,8 @@
 
                             </div>
                             <div class="mb-2">
-                                <input type="checkbox" name="empl[]" id="Volontarioat">
-                                <label for="Volontarioat">Volontarioat</label>
+                                <input type="checkbox" name="empl[]" id="Volontariat">
+                                <label for="Volontariat">Volontariat</label>
                             </div>
 
                             <h4>Anzeigenalter</h4>
@@ -193,6 +195,35 @@
             </div>
 
             <div class="col-sm-6 col-md-8 col-lg-9">
+                
+            <?php 
+                $count = 0;
+                foreach($jobs as $job): 
+                    extract($job);
+                    $count++;
+            ?>
+                                
+                <section class="border mb-4">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">
+                            <img class="img-fluid" src="bilder/logo.png" alt="muster_firmenlogo" width="150" height="150">
+                        </div>
+                        <div class="col-md-7 col-lg-8 col-xl-9">
+                            <h5><?php echo($art); ?> - <?php echo($bez); ?></h5>
+                            <p>20h/Woche</p>
+                            <p>Kurze Informationen zur Anzeige</p>
+                            <p class="end">
+                                <a class="btn btn-primary" href="jobangebot-anzeigen.php?id=<?php echo($id)?>">Weitere Informationen</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                
+            <?php endforeach; ?>
+                
+                <p class="center">Ende der Liste. Es wurden <?php echo $count ?> Jobangebote gefunden.</p>
+
+                <!--Restliche Jobangebote nur noch drin um Darstellung der Seite mit etwas mehr Jobangeboten zu zeigen, kommt raus sobald db eingebunden-->
                 <section class="border mb-4">
                     <div class="row">
                         <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">
@@ -203,7 +234,7 @@
                             <p>20h/Woche</p>
                             <p>Kurze Informationen zur Anzeige</p>
                             <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
+                                <a class="btn btn-primary" href="jobangebot-anzeigen.php">Weitere Informationen</a>
                                 <!--Später formatieren wie Button-->
                             </p>
                         </div>
@@ -220,7 +251,7 @@
                             <p>20h/Woche</p>
                             <p>Kurze Informationen zur Anzeige</p>
                             <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
+                                <a class="btn btn-primary" href="jobangebot-anzeigen.php">Weitere Informationen</a>
                                 <!--Später formatieren wie Button-->
                             </p>
                         </div>
@@ -237,7 +268,7 @@
                             <p>20h/Woche</p>
                             <p>Kurze Informationen zur Anzeige</p>
                             <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
+                                <a class="btn btn-primary" href="jobangebot-anzeigen.php">Weitere Informationen</a>
                                 <!--Später formatieren wie Button-->
                             </p>
                         </div>
@@ -254,58 +285,7 @@
                             <p>20h/Woche</p>
                             <p>Kurze Informationen zur Anzeige</p>
                             <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
-                                <!--Später formatieren wie Button-->
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="border mb-4">
-                    <div class="row">
-                        <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">
-                            <img class="img-fluid" src="bilder/logo.png" alt="muster_firmenlogo" width="150" height="150">
-                        </div>
-                        <div class="col-md-7 col-lg-8 col-xl-9">
-                            <h5>Werkstudent (m/w/d) - IT Servicedesk</h5>
-                            <p>20h/Woche</p>
-                            <p>Kurze Informationen zur Anzeige</p>
-                            <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
-                                <!--Später formatieren wie Button-->
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="border mb-4">
-                    <div class="row">
-                        <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">
-                            <img class="img-fluid" src="bilder/logo.png" alt="muster_firmenlogo" width="150" height="150">
-                        </div>
-                        <div class="col-md-7 col-lg-8 col-xl-9">
-                            <h5>Werkstudent (m/w/d) - IT Servicedesk</h5>
-                            <p>20h/Woche</p>
-                            <p>Kurze Informationen zur Anzeige</p>
-                            <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
-                                <!--Später formatieren wie Button-->
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="border mb-4">
-                    <div class="row">
-                        <div class="col-md-5 col-lg-4 col-xl-3 center align-self-center mb-3">
-                            <img class="img-fluid" src="bilder/logo.png" alt="muster_firmenlogo" width="150" height="150">
-                        </div>
-                        <div class="col-md-7 col-lg-8 col-xl-9">
-                            <h5>Werkstudent (m/w/d) - IT Servicedesk</h5>
-                            <p>20h/Woche</p>
-                            <p>Kurze Informationen zur Anzeige</p>
-                            <p class="end">
-                                <a class="btn btn-primary" href="jobangebot_anzeigen.html">Weitere Informationen</a>
+                                <a class="btn btn-primary" href="jobangebot-anzeigen.php">Weitere Informationen</a>
                                 <!--Später formatieren wie Button-->
                             </p>
                         </div>

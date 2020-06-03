@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="de">
 
+<?php include('php/calc-job.php'); ?>
+
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +33,13 @@
             </div>
         </header>
     </div>
-
+    
+    <?php if($job_found === false){ ?>
+    
+    <p class="center">Jobangebot existiert nicht</p>
+    
+    <?php } else { ?>
+    
     <div class="container border">
         <div class="row">
             <section class="col-md-4 last_td center">
@@ -39,7 +47,7 @@
             </section>
 
             <section class="col-md-8 last_td">
-                <h5>(Beschäftigungsart) - (Jobbezeichnung)</h5>
+                <h5><?php echo($art); ?> - <?php echo($bez); ?></h5>
                 <p>Zeitintensität: (Zeitintesität)</p>
                 <p>Beginn: (Beginn)</p>
                 <p>(Firma)</p>
@@ -87,11 +95,13 @@
         </section>
 
         <section class="end">
-            <a href="dummy" class="btn btn-primary" role="button">Bewerben</a>
+            <a href="http://www.google.com" class="btn btn-primary" role="button">Bewerben</a>
             <!--(Link zur Seite des Unternehmens (Falls Link angegeben wurde)-->
         </section>
     </div>
 
+    <?php } ?>
+    
     <footer>
         <hr>
         <nav>
