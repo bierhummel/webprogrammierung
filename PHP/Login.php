@@ -1,3 +1,11 @@
+<?php
+
+ini_set("session.use_cookies", 1); 
+ini_set("session.use_only_cookies", 0);
+ini_set("session.use_trans_sid", 1);
+
+session_start();
+?>
 <!doctype html>
 <html lang="de">
 
@@ -36,11 +44,49 @@
     <div class="row">
         <div class="container col-xl-4 border ">
 
+            <?php
+            
+            $emaildummy = "wael.hikal@uol.de";
+                            $passdummy = "12345678";
 
+            if(isset($_post['log'])){
+                
+            $email = (isset($_POST["email"]) && is_string($_POST["email"]))
+? $_POST["email"] : "";
+            $passwort = (isset($_POST["passwort"]) && is_string($_POST["passwort"]))
+? $_POST["passwort"] : "";
+            $ckbox = (isset($_POST["ckbox"]) && is_string($_POST["ckbox"])) ? $_POST["ckbox"] : "";
+                
+                                    }
+
+        $ckbox = htmlspecialchars($ckbox);
+            $email = htmlspecialchars($email);
+            $passwort = htmlspecialchars($passwort);
+                 if ($email == $emaildummy and $passwort == $passdummy){
+                    if ( isset($_POST['ckbox'])){
+                        
+                        setcookie('email', $email, time()+60*60*7);
+                                                    setcookie('passwort', $passwort, time()+60*60*7);
+
+                    }
+                    session_start();
+                    $_SESSION['email']= $email;
+                                        header("location: index.php");
+                    echo "Willkommen";
+
+                    
+                }else{ echo "email oder passwort ist  ungültig ";
+                     }
+                else{
+                    header("location: index.php");                    }
+
+            
+            }
+            ?>
             <section>
 
 
-                <form class="was-validated">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
                         <div class="row form-group">
@@ -82,7 +128,7 @@
                         </div>
                         <div class="form-check  d-flex align-items-end flex-column ">
 
-                            <input type="submit" class="btn btn-primary m-2 " value="Login">
+                            <input type="submit" class="btn btn-primary m-2 " name="log" value="Login">
                             <!-- <a href="profil.html">Login</a>-->
                         </div>
                         <div class="form-check d-flex align-items-end flex-column">
@@ -98,10 +144,50 @@
 
         <div class="container col-xl-4 border">
 
+            <?php
+            
+                        if(isset($_post['reg'])){
 
+$name = (isset($_POST["name"]) && is_string($_POST["name"]))
+? $_POST["name"] : "";
+           
+$email1 = (isset($_POST["email1"]) && is_string($_POST["email1"]))
+? $_POST["email1"] : "";
+            
+$passwort1 = (isset($_POST["passwort1"]) && is_string($_POST["passwort1"]))
+? $_POST["passwort1"] : "";
+ $passwort2 = (isset($_POST["passwort2"]) && is_string($_POST["passwort2"]))
+? $_POST["passwort2"] : "";
+
+$unv = (isset($_POST["unv"]) && 
+       is_string($_POST["unv"])) ? $_POST["unv"] : "";
+   
+$name = htmlspecialchars($name);
+$email1 = htmlspecialchars($email1);
+            $passwort1 = htmlspecialchars($passwort1);
+            $passwort2 = htmlspecialchars($passwort2);
+        $unv = htmlspecialchars($unv);
+            if ($_POST['passwort1']!= $_POST['passwort2'])
+ {
+     echo("Passwort nicht übereinstimmen! Versuchen Sie es erneut. ");
+ }
+                             $namedummy = "wael";
+                                  $emaildummy = "wael.hikal@uol.de";
+                            if ($email1 == $emaildummy and $name == $namedummy){
+                                
+                                     echo("Name oder Email ist bereits vorhanden ");
+
+                            }
+                                                header("location: index.php");       
+                            echo("Willkommen auf unsere Seite ");
+                            
+                        
+
+                        }
+?>
 
             <section>
-                <form class="was-validated">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="was-validated">
                     <fieldset>
                         <legend>Registrierung:</legend>
                         <div class="row form-group">
@@ -157,7 +243,7 @@
                         <div class="form-group d-flex align-items-end flex-column">
 
 
-                            <input type="submit" class="btn btn-primary" value="Registrieren">
+                            <input type="submit" class="btn btn-primary" name="reg" value="Registrieren">
                             <!--<a href="profil.html">Registrieren</a> -->
                             <!--(Submit soll auf neues Profil weiterleiten.. js? Bis dahin auch als Link)-->
                         </div>
@@ -179,4 +265,6 @@
             </p>
         </nav>
     </footer>
-</body></html>
+</body>
+
+</html>
