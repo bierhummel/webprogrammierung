@@ -64,7 +64,7 @@ body{
 }
 
 .jumbotron {
-    font-family: 'Raleway' sans-serif;
+    font-family: "Raleway", sans-serif;
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     background-color: rgba(103, 178, 164, 0.7);
@@ -109,15 +109,15 @@ h3 {
 .container.suchergebnisse{
     position: relative;
     margin-right: auto;
-    margin-left: auto; */
-    
-}
+    margin-left: auto;     
+}*/
+
 .container_for_login {
     display: flex;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-     padding-bottom: 100px;
+    padding-bottom: 100px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -193,5 +193,6 @@ textarea {
 
 section {
     display: block;
-    padding: inherit margin: auto
+    padding: inherit;
+    margin: auto;
 }

@@ -46,15 +46,6 @@ include('php/calc-job.php');
                             <input type="email" id="email" name="email">
                         </div>
                     </div>
-
-                    <div class="row form-group">
-                        <div class="col-sm">    
-                            <label for="email">Email:</label>
-                        </div>
-                        <div class="col-sm">
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </div>
                     
                     <div class="row form-group">
                         <div class="col-sm">
