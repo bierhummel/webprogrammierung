@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html lang="de">
 
+<?php include('php/calc-job.php'); ?>
+
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,30 +38,28 @@
 
     <div class="container border">
         <section>
-            <!--Annordung der Inputfelder in ein passendes responsives Grid-Layout fehlt noch-->
-
-            <form action="jobangebot_anzeigen.php" method="post">
+            <form action="jobangebot-anzeigen.php" method="post">
                 <section>
                     <h3 class="center">Allgemeine Informationen</h3>
                     <h4 class="center mb-4">Informationen zum Job</h4>
 
                     <div class="row">
                         <div class="col-md-5 last_td">
-                            <select class="form-control" name="fachrichtung" size="1" required>
+                            <select class="form-control" name="art" size="1" required>
                                 <option value="">Beschäftigunsart</option>
-                                <option value="fr1">Festanstellung</option>
-                                <option value="fr2">Praktikum</option>
-                                <option value="fr3">Aushilfe</option>
-                                <option value="fr4">Werkstudent</option>
-                                <option value="fr5">Volontarioat</option>
-                                <option value="fr6">Minijob</option>
+                                <option value="Festanstellung">Festanstellung</option>
+                                <option value="Praktikum">Praktikum</option>
+                                <option value="Aushilfe">Aushilfe</option>
+                                <option value="Werkstudent">Werkstudent</option>
+                                <option value="Volontarioat">Volontarioat</option>
+                                <option value="Minijob">Minijob</option>
                             </select>
                         </div>
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-5 last_td">
                             <label> Jobbezeichnung:
-                                <input type="text" name="jbez" maxlength="50" value="" placeholder="Jobbezeichnung" required>
+                                <input type="text" name="bez" maxlength="50" value="<?php if($job_found === true) echo($bez); ?>" placeholder="Jobbezeichnung" required>
                             </label>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                         </div>
                         
                         <div class="col-6 col-md-4 col-lg-3">
-                            <input type="submit" class="btn btn-primary" value="Jobanzeige erstellen"> <!---(Danach Jobangebot anzeigen)--->
+                            <input type="submit" class="btn btn-primary" name="submit_n_job" value="Jobanzeige erstellen"> <!---(Danach Jobangebot anzeigen)--->
                         </div>
                     </div>
 

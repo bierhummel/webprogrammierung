@@ -98,7 +98,7 @@ h3 {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    background-color: rgba(211,211,211,0.5);
+    /*background-color: rgba(211,211,211,0.5); rausgenommen, weil: sieht auf Suchergebnisse blöd aus*/
 }
 
 .container_for_login {

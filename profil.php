@@ -1,6 +1,8 @@
 <!doctype html>
-<html lang="de">
 
+<?php include('php/calc-job.php'); ?>
+
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,44 +75,35 @@
             <h4 class="center">Meine Anzeigen</h4>
 
             <p>
-                <input type="button" value="Anzeige erstellen" class="btn btn-primary">
-                <a href="jobanbebot_anlegen.html">Anzeige erstellen</a>
-                <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-                <br><br>
+                <a href="jobangebot-anlegen.php" class="btn btn-primary">Anzeige erstellen</a>
             </p>
 
+            <?php 
+                $count = 0;
+                foreach($jobs as $job): 
+                    extract($job);
+                    $count++;
+            ?>
+            
             <div class="border">
-                <p>
-                    <a href="jobanbebot_anzeigen.html">Jobangebot1</a>
-                    (Datum an dem Jobangebot erstellt wurde)
-                    (Jobangeobt aktiv/inaktiv)
+  
+                <a href="jobangebot-anzeigen.php?id=<?php echo($id)?>"> <?php echo($bez)?></a>
+                (Datum an dem Jobangebot erstellt wurde)
+                (Jobangeobt aktiv/inaktiv)
 
-                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
-                    <a href="jobanbebot_anlegen.html">Bearbeiten</a>
-                    <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
+                <a href="jobangebot-anlegen.php?id=<?php echo($id)?>" class="btn btn-secondary">Bearbeiten</a>
 
-                    <input type="button" value="Löschen" class="btn btn-light">
-                    <a href="jobanbebot_anlegen.html">Löschen</a>
+                <a href="profil.php?del=1&id=<?php echo($id)?>" class="btn btn-light">Löschen</a>
 
-                    <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-                </p>
             </div>
-
-            <div class="border">
-                <p>
-                    <a href="jobanbebot_anzeigen.html">Jobangebot2</a>
-                    (Datum an dem Jobangebot erstellt wurde)
-                    (Jobangeobt aktiv/inaktiv)
-
-                    <input type="button" value="Bearbeiten" class="btn btn-secondary">
-                    <a href="jobanbebot_anlegen.html">Bearbeiten</a>
-                    <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-
-                    <input type="button" value="Löschen" class="btn btn-light">
-                    <a href="jobanbebot_anlegen.html">Löschen</a>
-                    <!--(Lieber mit HTML-Link arbeiten und diesen wie Button aussehen lassen? oder Bild benutzen?)-->
-                </p>
-            </div>
+            
+            <?php endforeach; ?>
+            
+            <p class="center">Ende der Liste. Es wurden <?php echo $count ?> Jobangebote gefunden.</p>
+            
+            
+            
+    
 
         </section>
     </div>
