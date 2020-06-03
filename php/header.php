@@ -1,6 +1,9 @@
 <header class="container-fluid jumbotron">
     <h1 class="center">
-        <?=$title?>
+        <a href="index.php">
+            OSJB
+        </a>        
+        <!--<?=$title?>-->
     </h1>
 </header>
 
