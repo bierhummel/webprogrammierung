@@ -1,8 +1,17 @@
+<?php
+
+include('php/calc-job.php'); 
+
+ini_set("session.use_cookies", 1); 
+ini_set("session.use_only_cookies", 0);
+ini_set("session.use_trans_sid", 1);
+
+session_start();
+?>
+
 <!DOCTYPE html>
-
-<?php include('php/calc-job.php'); ?>
-
 <html lang="de">
+    
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -263,12 +272,10 @@
             </form>
         </section>
     </div>
-
     
     <?php
         include "php/footer.php";
     ?>
 
 </body>
-
 </html>

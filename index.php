@@ -1,6 +1,15 @@
+<?php
+
+ini_set("session.use_cookies", 1); 
+ini_set("session.use_only_cookies", 0);
+ini_set("session.use_trans_sid", 1);
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
-
+    
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,5 +82,4 @@
         include "php/footer.php";
     ?>
 </body>
-
 </html>

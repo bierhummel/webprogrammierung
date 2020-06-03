@@ -30,11 +30,7 @@ include('php/config-reg.php');
     <!--Später über Javascript vllt nur eins von beiden anzeigen lassen und über knopf Ansicht wechseln-->
     <div class="row">
         <div class="container col-xl-4 border ">
-
-
             <section>
-
-
                 <form action="php/config-login.php" method="post" class="was-validated">
                     <fieldset>
                         <legend>Log in:</legend>
@@ -90,9 +86,6 @@ include('php/config-reg.php');
         </div>
 
         <div class="container col-xl-4 border">
-
-
-
             <section>
                 <form action="php/config-reg.php" method="post" class="was-validated">
                     <fieldset>
