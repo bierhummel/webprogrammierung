@@ -26,6 +26,12 @@ $email1 = htmlspecialchars($email1);
 $passwort1 = htmlspecialchars($passwort1);
 $passwort2 = htmlspecialchars($passwort2);
 $unv = htmlspecialchars($unv);
+       
+       if ($passwort1 == $passwort2)
+ {
+                                        header("location: ../profil.php");
+
+        }
             if ($_POST['passwort1']!= $_POST['passwort2'])
  {
      echo("Passwort nicht übereinstimmen! Versuchen Sie es erneut. ");
@@ -37,8 +43,9 @@ $unv = htmlspecialchars($unv);
                                      echo("Name oder Email ist bereits vorhanden ");
 
                             }
+        
 
                         }
             
-           
+
 ?>
